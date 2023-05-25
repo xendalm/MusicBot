@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  app:
+    env_file: .env
+    restart: always
+    build:
+      context: .
+      dockerfile: build/Dockerfile
+      args:
+        POSTGRES_USER: ${POSTGRES_USER}
+        POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+        POSTGRES_DB: ${POSTGRES_DB}
+        POSTGRES_DB_HOST: ${POSTGRES_DB_HOST}
+        POSTGRES_PORT: ${POSTGRES_PORT}
+    depends_on:
+      - postgres
+      - lavalink
+
+  postgres:
+    env_file: .env
+    image: postgres:13
+    ports:
+      - "6543:${POSTGRES_PORT}"
+
+  lavalink:
+    image: ghcr.io/freyacodes/lavalink:3
+    restart: unless-stopped
+    environment:
+      - _JAVA_OPTIONS=-Xmx6G
+      - SERVER_PORT=${NODE_PORT}
+      - LAVALINK_SERVER_PASSWORD=${NODE_PASSWORD}
+    expose:
+      - ${NODE_PORT}
+    ports:
+      - 2334:${NODE_PORT}
