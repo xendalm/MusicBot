@@ -33,4 +33,4 @@ services:
     expose:
       - ${NODE_PORT}
     ports:
-      - 2334:${NODE_PORT}
+      - 2333:${NODE_PORT}

@@ -17,13 +17,14 @@ func main() {
 		log.Fatalf("error while reading env file: %v", err)
 	}
 
-	db, err := db.NewConnection(ctx)
+	database, err := db.NewConnection(ctx)
 	if err != nil {
-		log.Fatalf("unable to connect to the database: %v", err)
+		log.Fatalf("failed to connect to database: %v", err)
 		return
 	}
 
-	bot := bot.NewBot(db)
+	db.MigrationUp()
 
-	bot.Run()
+	b := bot.NewBot(database)
+	b.Run()
 }

@@ -47,7 +47,7 @@ func (b *Bot) Run() {
 
 	log.SetFlags(log.LstdFlags | log.Lshortfile)
 	log.SetLevel(log.LevelInfo)
-	log.Info("starting discordgo example...")
+	log.Info("Starting...")
 	log.Info("discordgo version: ", discordgo.VERSION)
 	log.Info("disgolink version: ", disgolink.Version)
 
@@ -106,7 +106,7 @@ func (b *Bot) onGuildCreate(session *discordgo.Session, event *discordgo.GuildCr
 	}
 }
 
-func (b *Bot) onGuildDelete(session *discordgo.Session, event *discordgo.GuildDelete) {
+func (b *Bot) onGuildDelete(_ *discordgo.Session, event *discordgo.GuildDelete) {
 	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
 	defer cancel()
 

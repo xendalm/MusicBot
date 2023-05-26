@@ -11,12 +11,14 @@ require (
 	github.com/jackc/pgconn v1.14.0
 	github.com/jackc/pgx/v4 v4.18.1
 	github.com/joho/godotenv v1.5.1
+	github.com/lib/pq v1.10.2
+	github.com/pressly/goose v2.7.0+incompatible
 )
 
 require (
-	github.com/TopiSenpai/dgo-paginator v0.0.0-20221211223320-2605eeed42cb // indirect
 	github.com/disgoorg/json v1.0.0 // indirect
 	github.com/gorilla/websocket v1.5.0 // indirect
+	github.com/pkg/errors v0.9.1 // indirect
 	golang.org/x/exp v0.0.0-20230224173230-c95f2b4c22f2 // indirect
 	golang.org/x/sys v0.5.0 // indirect
 )
