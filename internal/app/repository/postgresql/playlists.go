@@ -1,8 +1,8 @@
 package postgresql
 
 import (
-	"bobot/internal/pkg/db"
-	"bobot/internal/pkg/repository"
+	"bobot/internal/app/db"
+	"bobot/internal/app/repository"
 	"context"
 	"database/sql"
 	"errors"

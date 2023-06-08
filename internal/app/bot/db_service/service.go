@@ -1,9 +1,9 @@
 package db_service
 
 import (
-	"bobot/internal/pkg/db"
-	"bobot/internal/pkg/repository"
-	"bobot/internal/pkg/repository/postgresql"
+	"bobot/internal/app/db"
+	"bobot/internal/app/repository"
+	"bobot/internal/app/repository/postgresql"
 )
 
 type DbService struct {

@@ -1,7 +1,7 @@
 package db_service
 
 import (
-	"bobot/internal/pkg/repository"
+	"bobot/internal/app/repository"
 	"encoding/json"
 	"fmt"
 	"github.com/disgoorg/disgolink/v2/lavalink"

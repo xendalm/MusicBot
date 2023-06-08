@@ -1,8 +1,8 @@
 package main
 
 import (
-	"bobot/internal/pkg/bot"
-	"bobot/internal/pkg/db"
+	"bobot/internal/app/bot"
+	"bobot/internal/app/db"
 	"context"
 	"github.com/joho/godotenv"
 	"log"

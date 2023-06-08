@@ -1,7 +1,7 @@
 package db_service
 
 import (
-	"bobot/internal/pkg/repository"
+	"bobot/internal/app/repository"
 	"context"
 	"encoding/json"
 	"fmt"

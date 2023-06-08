@@ -1,10 +1,10 @@
 package bot
 
 import (
+	"bobot/internal/app/bot/db_service"
+	"bobot/internal/app/bot/tools"
+	"bobot/internal/app/db"
 	"bobot/internal/config"
-	"bobot/internal/pkg/bot/db_service"
-	"bobot/internal/pkg/bot/tools"
-	"bobot/internal/pkg/db"
 	"context"
 	"fmt"
 	"github.com/bwmarrin/discordgo"
