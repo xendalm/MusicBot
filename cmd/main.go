@@ -22,6 +22,7 @@ func main() {
 		log.Fatalf("failed to connect to database: %v", err)
 		return
 	}
+	defer database.GetPool(ctx).Close()
 
 	db.MigrationUp()
 
